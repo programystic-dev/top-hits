@@ -2,6 +2,8 @@
 
 Shows top 100 albums based on the json feed here: https://itunes.apple.com/us/rss/topalbums/limit=100/json
 
+Crossbrowser support is included in Create React App. App was tested on Chrome, Firefox, Safari and Edge.
+
 ## Tools
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
