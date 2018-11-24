@@ -2,6 +2,17 @@
 
 body {
   font-family: $main-font;
+  font-weight: 300;
   color: $secondary-color;
+
   background-color: $background-color;
+}
+
+.page-wrapper {
+  padding-top: 80px;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+  text-align: center;
 }

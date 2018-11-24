@@ -1,0 +1,41 @@
+@import './../../styles/variables.scss';
+
+.listItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+
+  background-color: $tile-background-color;
+  border-radius: $standard-radius;
+
+  .itemNumber {
+    margin-right: 30px;
+
+    font-size: 18px;
+    font-weight: 800;
+    color: $primary-color;
+  }
+
+  .itemDesc {
+    padding-left: 30px;
+
+    .descTitle {
+      margin: 0;
+      padding: 0;
+
+      font-size: 18px;
+      color: $primary-color;
+    }
+
+    .descArtist {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+.btnRightflex {
+  margin-left: auto;
+}
