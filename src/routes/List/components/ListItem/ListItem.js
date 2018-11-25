@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './ListItem.module.scss';
-import Avatar from './../Avatar/Avatar.js';
+import Avatar from './../../../../components/Avatar/Avatar.js';
 import LazyLoad from 'react-lazyload';
 import PropTypes from 'prop-types';
 
