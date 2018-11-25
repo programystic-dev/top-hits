@@ -12,6 +12,7 @@ class App extends Component {
     this.state = {
       hits: [],
       isLoading: true,
+      error: false,
     };
   }
 
@@ -20,19 +21,27 @@ class App extends Component {
       fetchHits().then(result => {
         this.setState({
           hits: result.feed.entry,
-          isLoading: false})
-        }).catch(err => console.log(err))
+          isLoading: false })
+        }).catch(err => {
+          this.setState({
+            error: true,
+            isLoading: false });
+        })
       }, 2000);
   }
 
   render() {
-    const { hits, isLoading } = this.state;
+    const { hits, isLoading, error } = this.state;
     return (
       <div className="page-wrapper">
         <Header />
 
         <div className="container">
-          {isLoading ? (
+          { error &&
+            <div className="error">I'm sorry! Error occured :(</div>
+          }
+
+          { isLoading ? (
             <Loader />
           ) : (
             <List list={hits}/>
