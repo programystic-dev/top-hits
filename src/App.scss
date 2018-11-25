@@ -6,6 +6,10 @@ body {
   color: $secondary-color;
 
   background-color: $background-color;
+  background-image: url('assets/images/background.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .page-wrapper {
