@@ -1,23 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import styles from './ListItem.module.scss';
 import Avatar from './../Avatar/Avatar.js';
-import Button from './../Button/Button.js';
+import LazyLoad from 'react-lazyload';
+import PropTypes from 'prop-types';
 
-class ListItem extends Component {
-  render() {
-    return (
-      <div className={classNames('col-12', styles.listItem)}>
-        <div className={styles.itemNumber}>1</div>
-        <Avatar alt="Album label" size="small" src="https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/47/21/19/472119fe-faab-e48a-418d-cbe729156183/00044003199552.rgb.jpg/60x60bb-85.png"/>
+const ListItem = ({ item, index }) => (
+  <div className={styles.container}>
+    <LazyLoad height={100} throttle={100}>
+      <div className={classNames(styles.fade, styles.listItem)}>
+        <div className={styles.itemNumber}>{index + 1}</div>
+        <Avatar alt="Album label" size="small" src={item['im:image'][1].label} />
         <div className={styles.itemDesc}>
-          <h2 className={styles.descTitle}>Title of the album</h2>
-          <p className={styles.descArtist}>Artist</p>
+          <h2 className={styles.descTitle}>{item.title.label}</h2>
+          <p className={styles.descArtist}>{item['im:artist'].label}</p>
         </div>
-        <Button onClick={() => console.log('I was clicked.')} className={styles.btnRightflex} />
       </div>
-    );
-  }
+    </LazyLoad>
+  </div>
+)
+
+ListItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
 }
 
 export default ListItem;

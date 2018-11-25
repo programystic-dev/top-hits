@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
 import './App.scss';
-import ListItem from './components/ListItem/ListItem.js';
+import fetchHits from './api/api.js';
+import Header from './components/Header/Header.js';
+import List from './components/List/List.js';
+import Loader from './components/Loader/Loader.js';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hits: [],
+      isLoading: true,
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      fetchHits().then(result => {
+        this.setState({
+          hits: result.feed.entry,
+          isLoading: false})
+        }).catch(err => console.log(err))
+      }, 2000);
+  }
+
   render() {
+    const { hits, isLoading } = this.state;
     return (
       <div className="page-wrapper">
+        <Header />
 
         <div className="container">
-          <h1>Top 100 Music Hits</h1>
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <ListItem />
-          </div>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <List list={hits}/>
+          )
+          }
         </div>
 
       </div>

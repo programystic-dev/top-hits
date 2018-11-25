@@ -1,0 +1,30 @@
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.note {
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+}
+
+.down {
+  animation: goDown 0.8s ease infinite;
+}
+
+.up {
+  animation: goUp 0.8s ease infinite;
+}
+
+@keyframes goDown {
+    0%   {margin-top: 0px;}
+    50%  {margin-top: -10px;}
+    100% {margin-top: 0px;}
+}
+
+@keyframes goUp {
+    0%   {margin-top: 0px;}
+    50%  {margin-top: 10px;}
+    100% {margin-top: 0px;}
+}

@@ -4,6 +4,8 @@ Shows top 100 albums based on the json feed here: https://itunes.apple.com/us/rs
 
 Crossbrowser support is included in Create React App. App was tested on Chrome, Firefox, Safari and Edge.
 
+Used setTimeout() to show an animation of Loader ♪ ♫ ♬
+
 ## Tools
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
