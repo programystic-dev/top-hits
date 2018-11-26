@@ -8,7 +8,7 @@ import DetailsRoute from './routes/Details/DetailsRoute.js';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter basename={'/top-hits'}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="page-wrapper">
         <Header />
         <Switch>
