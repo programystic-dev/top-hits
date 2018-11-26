@@ -8,12 +8,12 @@ import DetailsRoute from './routes/Details/DetailsRoute.js';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={'/top-hits'}>
       <div className="page-wrapper">
         <Header />
         <Switch>
-          <Route exact path="/" component={ListRoute}/>
-          <Route path="/details/:id" component={DetailsRoute} />}/>
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={ListRoute}/>
+          <Route path={`${process.env.PUBLIC_URL}/details/:id`} component={DetailsRoute} />}/>
         </Switch>
       </div>
       </BrowserRouter>

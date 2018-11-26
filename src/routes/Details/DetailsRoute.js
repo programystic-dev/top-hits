@@ -26,7 +26,7 @@ class DetailsRoute extends Component {
     return(
       <div className="container">
         <div className={classNames("row", styles.comeBack)}>
-          <Link to="/">
+          <Link to={`${process.env.PUBLIC_URL}/`}>
             <Button label="Go to List"/>
           </Link>
         </div>

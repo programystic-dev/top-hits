@@ -19,7 +19,7 @@ const ListItem = ({ item, index }) => (
             <p className={styles.descArtist}>{item['im:artist'].label}</p>
           </div>
         </div>
-        <Link to={{pathname: `details/${index+1}`, state: {data: item}}}>
+        <Link to={{pathname: `${process.env.PUBLIC_URL}/details/${index+1}`, state: {data: item}}}>
           <Button label="More" className={styles.btnRightflex}/>
         </Link>
       </div>
