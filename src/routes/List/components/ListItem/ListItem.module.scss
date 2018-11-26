@@ -92,13 +92,18 @@
   transform: scale(1.2);
 }
 
-.btnRightflex {
+.btnRightflex, a {
   margin-left: auto;
 
   @media (max-width: 768px) {
     margin-left: 0;
-    margin-top: 20px;
     width: 100%;
+  }
+}
+
+a {
+  @media (max-width: 768px) {
+    margin-top: 20px;
   }
 }
 

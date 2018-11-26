@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from './ListItem.module.scss';
 import Avatar from './../../../../components/Avatar/Avatar.js';
+import Button from './../../../../components/Button/Button.js';
 import LazyLoad from 'react-lazyload';
 import PropTypes from 'prop-types';
 
@@ -17,6 +19,9 @@ const ListItem = ({ item, index }) => (
             <p className={styles.descArtist}>{item['im:artist'].label}</p>
           </div>
         </div>
+        <Link to={{pathname: `details/${index+1}`, state: {data: item}}}>
+          <Button label="More" className={styles.btnRightflex}/>
+        </Link>
       </div>
     </LazyLoad>
   </div>

@@ -1,0 +1,56 @@
+@import "./../../styles/variables.scss";
+
+.detailsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px;
+
+  background-color: $tile-background-color;
+
+  @media (max-width: 991px) {
+    padding: 30px
+  }
+}
+
+.detailsInfoWrapper {
+  margin-left: 60px;
+  max-width: 500px;
+
+  .title {
+    text-align: left;
+  }
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.detailsInfo {
+  margin-bottom: 30px;
+
+  p {
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px;
+  }
+
+  p:nth-child(odd) {
+    background-color: $background-color;
+  }
+  p:nth-child(even) {
+    background-color: #383b77;
+  }
+}
+
+.comeBack {
+  a {
+    margin-left: 0;
+  }
+  button {
+    margin-bottom: 15px;
+  }
+}

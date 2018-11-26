@@ -2,9 +2,15 @@
 
 Shows top 100 albums based on the json feed here: https://itunes.apple.com/us/rss/topalbums/limit=100/json
 
+## Comment on the code
+
 Crossbrowser support is included in Create React App. App was tested on Chrome, Firefox, Safari and Edge.
 
 Used setTimeout() to show an animation of Loader ♪ ♫ ♬
+
+## About routes (routes branch)
+
+Routes in the project was created using [React Router](https://github.com/ReactTraining/react-router). For now item's data from the list is passed via Link element, which creates minor problems - can't access details page directly from a link, only by selecting an item from the List. This could be quickly fixed by fetching data inside the DetailsRoute Component, however the best solution would be introducing [Redux](https://redux.js.org/). By creating a store, only the id of the item would be passed via Link and then used to read the proper data from store.
 
 ## Tools
 
