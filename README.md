@@ -1,6 +1,9 @@
 # Top Hits List
 
 Shows top 100 albums based on the json feed here: https://itunes.apple.com/us/rss/topalbums/limit=100/json
+Go and see the working page [here](https://graffme.github.io/top-hits/) 🎧
+
+There is also 'routes' branch where you can find extended version of the project and a comment on the code in README!
 
 Crossbrowser support is included in Create React App. App was tested on Chrome, Firefox, Safari and Edge.
 
